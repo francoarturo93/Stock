@@ -25,7 +25,7 @@ Este es un proyecto de gestión de inventario y control de stock que permite man
   - **file-saver** para la descarga de archivos desde el frontend, como reportes o exportaciones de datos.
   - **Font Awesome** : Iconos visuales en botones, menús y estados del inventario, mejorando la experiencia del usuario.
 - **Despliegue en `Netlify`**
-  - URL: [lojusto.netlify.app](lojusto.netlify.app)
+  - URL: [lojusto.netlify.app](https://www.lojusto.netlify.app)
 
 ### Requisitos previos
 - **Java 17** o superior.
