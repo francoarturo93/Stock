@@ -1,0 +1,14 @@
+# Node.js (Angular)
+/front/node_modules/
+/front/dist/
+/front/.angular/cache/
+
+# Java (Spring Boot)
+/back/target/
+/back/.classpath
+/back/.project
+/back/.settings/
+
+# Sistema
+.DS_Store
+Thumbs.db
