@@ -1,27 +1,79 @@
-# Front
+# Sistema de Gestión de Inventario (Frontend)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.16.
+## Descripción del Proyecto
 
-## Development server
+Este es un sistema de gestión de inventario desarrollado con Angular, diseñado para facilitar el control y seguimiento de productos, categorías, entradas y salidas de stock.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Demo
+Aquí hay una demostración en vivo que funciona: [lojusto.netlify.app](https://lojusto.netlify.app).
 
-## Code scaffolding
+Estas son algunas imagenes de como se ve la aplicacion **Inventario LoJusto**:  
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+![inicio](./src/assets/Inicio.PNG)
 
-## Build
+Añadir nuevo Producto
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+![crear](./src/assets/CrearProducto.PNG)
 
-## Running unit tests
+## Características Principales
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### Gestión de Productos
+- Crear nuevos productos
+- Listar productos
+- Actualizar información de productos
+- Eliminar productos
+- Buscar productos por categoría
+- Paginación de productos
 
-## Running end-to-end tests
+### Gestión de Categorías
+- Crear categorías
+- Listar categorías
+- Actualizar categorías
+- Eliminar categorías
+- Paginación de categorías
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+### Control de Stock
+- Registrar entradas de productos
+- Registrar salidas de productos
+- Buscar entradas y salidas por fecha
+- Exportar e importar datos de stock mediante archivos Excel
 
-## Further help
+## Tecnologías Utilizadas
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- Angular 16.2.0
+- RxJS
+- TypeScript
+- HttpClient para comunicación con backend
+- Font Awesome para iconos
+
+## Dependencias Principales
+
+- `@angular/core`
+- `@angular/forms`
+- `@angular/router`
+- `rxjs`
+- `file-saver` para exportaciones a excel
+- `@fortawesome/fontawesome-free`
+
+## Requisitos del Sistema
+
+- `Node.js 16+`
+- `npm 8+`
+- `Angular CLI`
+- `Navegador moderno (Chrome, Firefox, Edge)`
+
+## Rutas Disponibles
+
+- `/page-productos`: Listado paginado de productos
+- `/page-categorias`: Listado paginado de categorías
+- `/crear-productos`: Formulario para crear productos
+- `/crear-categorias`: Formulario para crear categorías
+- `/registrar-entrada`: Registrar entradas de stock
+- `/registrar-salida`: Registrar salidas de stock
+
+## Funcionalidades de Exportación/Importación
+
+- Exportar productos a Excel
+- Exportar entradas a Excel
+- Exportar salidas a Excel
+- Importar productos desde archivo Excel

@@ -12,11 +12,14 @@ Este es un proyecto de gestión de inventario y control de stock que permite man
   - `spring-boot-starter-web` - Para crear servicios REST.
   - `spring-boot-devtools` - Herramientas de desarrollo.
 - **MapStruct 1.5.2.Final** - Para mapear entidades y DTOs.
+- **Apache Poi** - Para importar y exportar archivos `.xlsx`.
 - **MySQL** - Base de datos relacional.
 - **Lombok** - Para reducir el código repetitivo (Getters, Setters, etc.).
 - **Maven** - Para la gestión de dependencias y ciclo de vida del proyecto.
   
 ### Frontend
+- **Despliegue en `Netlify`**
+  - URL: [lojusto.netlify.app](https://lojusto.netlify.app)
 - **Angular 16.2.16**
   - Uso de componentes SPA para gestionar productos y controlar el stock.
   - Estilos en **CSS**.
@@ -24,8 +27,6 @@ Este es un proyecto de gestión de inventario y control de stock que permite man
   - Uso de formularios reactivos y validaciones con `@angular/forms`.
   - **file-saver** para la descarga de archivos desde el frontend, como reportes o exportaciones de datos.
   - **Font Awesome** : Iconos visuales en botones, menús y estados del inventario, mejorando la experiencia del usuario.
-- **Despliegue en `Netlify`**
-  - URL: [lojusto.netlify.app](https://lojusto.netlify.app)
 
 ### Requisitos previos
 - **Java 17** o superior.
