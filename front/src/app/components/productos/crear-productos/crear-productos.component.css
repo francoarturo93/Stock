@@ -1,0 +1,61 @@
+.form-container {
+  max-width: 500px;
+  margin: 10px auto;
+  padding: 30px;
+  background-color: var(--fondo-color);
+  border-radius: 10px;
+  box-shadow: 10px 10px 10px var(--border-color);
+  /* color: var(--text-color); */
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+h1{
+  text-align: center;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  color: var(--secondary-color);
+}
+select option:disabled {
+  color: #aaa; /* Texto gris */
+  font-style: italic; /* Opcional: texto cursivo */
+}
+
+select:focus option {
+  background-color: var(--background-color); /* Verde claro */
+  color: var(--primary-color);
+}
+select option[selected] {
+  background-color: var(--text-color); /* Amarillo */
+  color: var(--fondo-color);
+  font-weight: bold;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+
+.fecha-entradas-container .entradas-encontradas{
+  border: 10px solid white;
+}

@@ -1,0 +1,13 @@
+<div class="form-container">
+  <h1>Eliminar Producto</h1>
+
+  <div class="form-group">
+    <label for="producto">Seleccionar Producto</label>
+    <select id="producto" [(ngModel)]="productoId">
+      <option value="" disabled selected>Selecciona un producto</option>
+      <option *ngFor="let producto of productos" [value]="producto.id">{{ producto.nombre }}</option>
+    </select>
+  </div>
+
+  <button (click)="eliminarProducto()">Eliminar Producto</button>
+</div>

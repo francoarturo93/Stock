@@ -1,0 +1,14 @@
+<div class="form-container">
+  <h1>Eliminar Categoria</h1>
+
+  <div class="form-group">
+    <label for="categoria">Seleccionar Categoria</label>
+    <select id="categoria" [(ngModel)]="categoriaId">
+      <option value="" disabled selected>Selecciona un producto</option>
+      <option *ngFor="let categoria of categorias" [value]="categoria.id">{{ categoria.nombre }}</option>
+    </select>
+  </div>
+
+  <button (click)="eliminarCategoria()">Eliminar Categoria</button>
+</div>
+

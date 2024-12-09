@@ -1,0 +1,18 @@
+<form class="form-container" [formGroup]="categoriaForm" (ngSubmit)="actualizarCategoria()">
+  <h1>Actualizar Producto</h1>
+
+  <div class="form-group">
+    <label for="categoria">Seleccionar Producto</label>
+    <select id="categoria" formControlName="categoriaId" (change)="cargarDatosCategoria($event.returnValue.valueOf.name)">
+      <option value="" disabled selected>Selecciona una Categoria</option>
+      <option *ngFor="let categoria of categorias" [value]="categoria.id">{{ categoria.nombre }}</option>
+    </select>
+  </div>
+  <h2>Actualizacion: </h2>
+  <div class="form-group">
+    <label for="nombre">Nombre</label>
+    <input id="nombre" formControlName="nombre" placeholder="Escribe el nuevo nombre" />
+  </div>
+
+  <button type="submit">Actualizar Categoria</button>
+</form>

@@ -1,0 +1,9 @@
+/* src/styles/colors.css */
+:root {
+  --primary-color: #BF1B28;
+  --secondary-color: #BF1B39;
+  --text-color: #F2B705;
+  --background-color: #f0dc90;
+  --border-color: #F2CB05;
+  --fondo-color: #0D0D0D;
+}

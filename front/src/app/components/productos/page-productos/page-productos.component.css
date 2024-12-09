@@ -1,0 +1,108 @@
+.productos-container{
+  background-color: var(--fondo-color);
+  border-color: var(--border-color);
+  width: 90%;
+  margin: 10px auto;
+  padding: 20px;
+  /* border: 5px solid var(--border-color); */
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px var(--border-color);
+}
+.productos-container h2{
+  text-align: center;
+  margin-bottom: 20px;
+}
+.productos-container table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.productos-container table th{
+  background-color: var(--primary-color);
+  color: var(--text-color);
+}
+.productos-container table td{
+  color: var(--secondary-color);
+}
+.productos-container table th,
+.productos-container table td{
+  /* text-align: left; */
+  padding: 12px;
+  border: 1px solid var(--border-color);
+}
+.productos-container .paginacion {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.productos-container .paginacion button {
+  padding: 10px 20px;
+  border: none;
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.productos-container .paginacion button:hover {
+  background-color: var(--background-color);
+}
+
+.productos-container .paginacion button:disabled {
+  background-color: var(--background-color);
+  cursor: not-allowed;
+}
+.exportar-btn {
+  margin-bottom: 1rem;
+  padding: 1rem 1rem;
+  background-color:  var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+
+}
+
+.exportar-btn:hover {
+  background-color: var(--text-color);
+  color: var(--fondo-color);
+}
+
+.acciones {
+  display: flex;
+  justify-content:space-between;
+  /* flex-wrap: wrap; */
+  margin-bottom: 1rem;
+  gap: 10px;
+  /* border: 5px solid white; */
+}
+.import{
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  /* flex-wrap: wrap; */
+  /* border: 5px solid white; */
+
+}
+input[type="file"] {
+  padding: 8px;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  background-color: var(--fondo-color);
+  cursor: pointer;
+  transition: border-color 0.3s;
+}
+
+input[type="file"]:hover {
+  border-color: var(--primary-color);
+}
+button{
+  padding: 10px 20px;
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}

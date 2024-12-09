@@ -1,0 +1,86 @@
+.fecha-entradas-container{
+  max-width: 500px;
+  margin: 10px auto;
+  padding: 30px;
+  background-color: var(--fondo-color);
+  border-radius: 10px;
+  box-shadow: 10px 10px 10px var(--border-color);
+  /* color: var(--text-color); */
+}
+h1{
+  text-align: center;
+}
+.form-group {
+  margin-bottom: 20px;
+}
+.form-button {
+  display: flex;
+
+  justify-content:space-between;
+  /* flex-wrap: wrap; */
+}
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input{
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  color: var(--secondary-color);
+}
+button {
+  padding: 10px 20px;
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.fecha-entradas-container table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  text-align: center;
+}
+.fecha-entradas-container table th{
+  background-color: var(--primary-color);
+  color: var(--text-color);
+}
+.fecha-entradas-container table td{
+  color: var(--secondary-color);
+}
+.fecha-entradas-container table th,
+.fecha-entradas-container table td{
+  /* text-align: left; */
+  padding: 12px;
+  border: 1px solid var(--border-color);
+}
+.fecha-entradas-container .paginacion {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.fecha-entradas-container .paginacion button {
+  padding: 10px 20px;
+  border: none;
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.fecha-entradas-container .paginacion button:hover {
+  background-color: var(--background-color);
+}
+
+.fecha-entradas-container .paginacion button:disabled {
+  background-color: var(--background-color);
+  cursor: not-allowed;
+}

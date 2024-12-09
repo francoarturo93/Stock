@@ -1,0 +1,25 @@
+<div class="productos-container">
+  <h2>Paginas de Categorias</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nombre</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let categoria of categorias">
+        <td>{{ categoria.id }}</td>
+        <td>{{ categoria.nombre }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="paginacion">
+    <button (click)="anteriorPagina()" [disabled]="page === 0">Anterior</button>
+    <span>Página {{ page + 1 }}</span>
+    <button (click)="siguientePagina()" [disabled]="categorias.length === 0">Siguiente</button>
+  </div>
+</div>
+

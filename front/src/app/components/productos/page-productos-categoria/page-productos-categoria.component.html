@@ -1,0 +1,34 @@
+<div class="productos-container">
+  <h1>Buscar Productos por Categoria</h1>
+
+  <form class="form-group" [formGroup]="categoriaForm" (ngSubmit)="cambiarCategoria()">
+    <label for="categoria">Selecciona una categoría:</label>
+    <select id="categoria" formControlName="categoriaSeleccionada">
+      <option *ngFor="let categoria of categorias" [value]="categoria.id">
+        {{ categoria.nombre }}
+      </option>
+    </select>
+    <button type="submit">Buscar</button>
+  </form>
+
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nombre</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let producto of productos">
+        <td>{{ producto.id }}</td>
+        <td>{{ producto.nombre }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="paginacion">
+    <button (click)="anteriorPagina()" [disabled]="page === 0">Anterior</button>
+    <span>Página {{ page + 1 }}</span>
+    <button (click)="siguientePagina()" [disabled]="page === totalPages-1">Siguiente</button>
+  </div>
+</div>

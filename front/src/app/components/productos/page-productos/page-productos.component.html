@@ -1,0 +1,47 @@
+<div class="productos-container">
+
+  <h2>Paginas de Productos</h2>
+  <div class="acciones">
+    <button (click)="exportarExcel()" class="exportar-btn">
+      Exportar a Excel <i class="fa-solid fa-download fa-lg"></i>
+    </button>
+    <div class="import">
+      <input type="file" (change)="onFileSelected($event)" />
+      <button (click)="importarExcel()" [disabled]="!archivoSeleccionado" class="exportar-btn">
+        importar a Excel <i class="fa-solid fa-upload fa-lg"></i>
+      </button>
+      <p *ngIf="mensaje">{{ mensaje }}</p>
+    </div>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nombre</th>
+        <th>Precio</th>
+        <th>Categoría</th>
+        <th>Entradas</th>
+        <th>Salidas</th>
+        <th>Stock</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let producto of productos">
+        <td>{{ producto.id }}</td>
+        <td>{{ producto.nombre }}</td>
+        <td>{{ producto.precio }}</td>
+        <td>{{ producto.categoria.nombre }}</td>
+        <td>{{ producto.entradas }}</td>
+        <td>{{ producto.salidas }}</td>
+        <td>{{ producto.stock }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="paginacion">
+    <button (click)="anteriorPagina()" [disabled]="page === 0">Anterior</button>
+    <span>Página {{ page + 1 }}</span>
+    <button (click)="siguientePagina()" [disabled]="productos.length === 0">Siguiente</button>
+  </div>
+</div>

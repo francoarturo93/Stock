@@ -1,0 +1,137 @@
+/* navbar.component.css */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: var(--fondo-color);
+  border-radius: 10px;
+}
+/* Logo y nombre */
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 50%;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  max-height: 50px;
+  max-width: 150px;
+  object-fit: contain;
+  border-radius: 25px;
+}
+.logo-nombre {
+  color: var(--primary-color);
+  /* text-decoration: none; */
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  width: 25px;
+  height: 3px;
+  background-color: var(--text-color);
+  margin: 3px 0;
+  transition: 0.4s;
+}
+
+.navbar-menu {
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+}
+
+.navbar-menu a {
+  color: white;
+  text-decoration: none;
+  color: var(--text-color);
+  transition: color 0.3s;
+}
+
+.navbar-menu a:hover {
+  color: var(--primary-color);
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  .navbar-menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+  }
+
+  .navbar-menu.active {
+    display: flex;
+  }
+
+  .navbar-menu li {
+    padding: 0.5rem 0;
+    border-top: 1px solid rgba(255,255,255,0.1);
+  }
+}
+
+/* navbar.component.css */
+.navbar-menu > li {
+  position: relative;
+}
+
+.submenu-container {
+  position: relative;
+}
+
+.submenu {
+  display: none;
+  position: absolute;
+  background-color: #444;
+  min-width: 200px;
+  z-index: 1;
+  text-decoration: none;
+  left: 0; /* Ajusta el submenú al lado izquierdo */
+  transform: translateX(-100%); /* Mueve el submenú completamente hacia la izquierda */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Opcional: para separar visualmente */
+}
+
+.submenu.active {
+  display: block;
+}
+
+.submenu li {
+  padding: 0.5rem;
+  list-style-type: none;
+}
+
+.submenu a {
+  color: var(--text-color);
+  text-decoration: none;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .submenu {
+    position: static;
+    background-color: transparent;
+    transform: none; /* Restablece el desplazamiento en pantallas pequeñas */
+    list-style-type: none;
+  }
+}

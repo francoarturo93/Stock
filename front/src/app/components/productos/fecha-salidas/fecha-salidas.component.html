@@ -1,0 +1,52 @@
+<div class="fecha-entradas-container">
+  <h1>Buscar Salida por Fecha</h1>
+
+  <!-- Formulario para ingresar la fecha -->
+  <form [formGroup]="fechaForm" (ngSubmit)="buscarSalidasPorFecha()">
+    <div class="form-group">
+      <label for="fecha">Fecha (dd-mm-yy):</label>
+      <input id="fecha" type="date" formControlName="fecha" class="input-fecha">
+    </div>
+    <div class="form-button">
+      <button type="submit" class="btn-buscar">
+        Buscar <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+      </button>
+      <button (click)="exportarExcel()" class="exportar-btn">
+        Exportar a Excel <i class="fa-solid fa-download fa-lg"></i>
+      </button>
+    </div>
+  </form>
+
+
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nombre</th>
+          <th>Salidas(unidades)</th>
+          <th>Fecha</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let salida of salidas">
+          <td>{{ salida.id }}</td>
+          <td>{{ salida.nombre }}</td>
+          <td>{{ salida.cantidadSalida }}</td>
+          <td>{{ salida.fechaSalida }}</td>
+        </tr>
+      </tbody>
+    </table>
+
+
+  <!-- Controles de paginación -->
+
+  <div class="paginacion">
+    <button (click)="anteriorPagina()" [disabled]="page === 0">Anterior</button>
+    <span>Página {{ page + 1 }}</span>
+    <button (click)="siguientePagina()" [disabled]="page === totalPages-1">Siguiente</button>
+  </div>
+
+  <div *ngIf="salidas.length === 0" class="no-entradas">
+    No se encontraron entradas para la fecha seleccionada.
+  </div>
+</div>
